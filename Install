@@ -14,12 +14,12 @@ fi
 repodir=$(cd $(dirname $0) && pwd)
 srcdir=${repodir}/src
 
-  rm -rf $DEST_DIR/Matcha*
+  rm -rf $DEST_DIR/Matcha-Custom*
 
 # Copying files
-	echo -e "   Installing Matcha ..."
+	echo -e "   Installing Matcha-Custom ..."
 
-	themedir=$DEST_DIR/Matcha
+	themedir=$DEST_DIR/Matcha-Custom
 	install -d ${themedir}
 
 	# Install index.theme
@@ -115,9 +115,9 @@ srcdir=${repodir}/src
 		${themedir}
 
 # Copying Matcha-Dark-shell files
-	echo -e "   Installing Matcha-Dark ..."
+	echo -e "   Installing Matcha-Custom-Dark ..."
 
-	themedir=$DEST_DIR/Matcha-Dark
+	themedir=$DEST_DIR/Matcha-Custom-Dark
 	install -d ${themedir}
 
 	# Install index.theme
@@ -173,8 +173,8 @@ srcdir=${repodir}/src
 
 # Set Matcha Gtk Themes
   echo "Setting the theme..."
-  gsettings set org.gnome.desktop.interface gtk-theme Matcha
-  gsettings set org.gnome.desktop.wm.preferences theme Matcha
+  gsettings set org.gnome.desktop.interface gtk-theme Matcha-Custom
+  gsettings set org.gnome.desktop.wm.preferences theme Matcha-Custom
   echo "Done!"
 
 
